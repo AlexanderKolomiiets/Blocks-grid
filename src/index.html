@@ -5,47 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
     <style>
-      body {
+      .main {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+        font-size: 18px;
       }
-      .pickers {
+      .colors {
         display: flex;
         gap: 30px;
       }
       .container {
         display: grid;
         gap: 1px;
-        width: min-content;
-        margin: 0 auto;
       }
       .cell {
         display: flex;
         justify-content: center;
         align-items: center;
-        font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
-        font-size: 18px;
         height: 42px;
         width: 42px;
-        border: 1px solid #ddd;
         cursor: pointer;
+        transition: 0.2s;
       }
     </style>
   </head>
   <body>
-    <div class="pickers">
-      <label for="initial">
-        Initial color
-        <input type="color" id="initial" name="initial" value="#ff0000">
-      </label>
-      <label for="new">
-        New color
-        <input type="color" id="new" name="new" value="#000000">
-      </label>
+    <div class="main">
+      <div class="colors">
+        <label for="initial">
+          Initial color
+          <input type="color" id="initial" name="initial" value="#ff0000">
+        </label>
+        <label for="new">
+          New color
+          <input type="color" id="new" name="new" value="#000000">
+        </label>
+      </div>
+      <div class="container"></div>
     </div>
-    <div class="container"></div>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <script type="text/javascript" src="main.js"></script>
   </body>
 </html>
